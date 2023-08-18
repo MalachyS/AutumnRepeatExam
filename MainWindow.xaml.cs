@@ -32,13 +32,13 @@ namespace AutumnRepeatExam
 
         private List<Member> RandomMemberGenerator()
         {
-            List<string> firstNames = new List<string>
+            List<string> firstNames = new List<string> //All firstnames 
             {
                 "James", "Jack", "Daniel", "Conor", "Sean", "Noah", "Adam", "Michael", "Charlie", "Thomas",
                 "Emily", "Emma", "Sophie", "Grace", "Ava", "Amelia", "Olivia", "Ella", "Hannah", "Lucy"
             };
 
-            List<string> lastNames = new List<string>
+            List<string> lastNames = new List<string> // All lastNames
             {
                 "Murphy", "Smith", "O'Kelly", "Byrne", "O'Sullivan", "O'Connor", "McCarthy", "Walsh", "O'Brien",
                 "Ryan", "MacGabhann", "Ni Mhurchu", "O'Riain", "Mac Gabhann", "Ni Riain", "Mac Carthaigh",
@@ -91,37 +91,6 @@ namespace AutumnRepeatExam
         }
     }
 
-    internal class Member
-    {
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public DateTime DOB { get; set; }
-
-        public Member(string firstName, string lastName, DateTime dob)
-        {
-            FirstName = firstName;
-            LastName = lastName;
-            DOB = dob;
-        }
-
-        public int GetAge()
-        {
-            DateTime currentDate = DateTime.Now;
-            int age = currentDate.Year - DOB.Year;
-
-            if (currentDate.Month < DOB.Month || (currentDate.Month == DOB.Month && currentDate.Day < DOB.Day))
-            {
-                age--;
-            }
-
-            return age;
-        }
-
-        public override string ToString()
-        {
-            return $"{LastName}, {FirstName} - {DOB:MM/dd/yyyy} ({GetAge()} years old)";
-        }
-    }
 
 
 }

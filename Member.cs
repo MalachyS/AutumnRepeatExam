@@ -9,11 +9,11 @@ internal class Member : IComparable<Member>
     public DateTime DOB { get; set; }
 
     // Constructors
-    public Member(string firstName, string lastName, DateTime dOB)
+    public Member(string firstName, string lastName, DateTime dob)
     {
         FirstName = firstName;
         LastName = lastName;
-        DOB = dOB;
+        DOB = dob;
     }
 
     public Member() { }
@@ -43,9 +43,8 @@ internal class Member : IComparable<Member>
     }
 
     // Override ToString method
-    public override string ToString()
-    {
-        int age = GetAge();
-        return $"{LastName}, {FirstName} - {DOB:MM/dd/yyyy} ({age})";
-    }
+      public override string ToString()
+        {
+            return $"{LastName}, {FirstName} - {DOB:MM/dd/yyyy} ({GetAge()} years old)";
+        }
 }
