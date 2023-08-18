@@ -20,9 +20,16 @@ namespace AutumnRepeatExam
     /// </summary>
     public partial class MainWindow : Window
     {
+        //github repo https://github.com/MalachyS/AutumnRepeatExam.git
+
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
