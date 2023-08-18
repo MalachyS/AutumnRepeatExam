@@ -89,8 +89,30 @@ namespace AutumnRepeatExam
 
             return teams;
         }
+
+        private void lbxTeams_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+            if (lbxTeams.SelectedItem is Team selectedTeam)
+            {
+                switch (selectedTeam.Teamname)
+                {
+                    case "Senior":
+                        lbxSwimmers.ItemsSource = selectedTeam.players;
+                        break;
+                    case "U18":
+                        lbxSwimmers.ItemsSource = selectedTeam.players.FindAll(player => player.GetAge() <= 17);
+                        break;
+                    case "U16":
+                        lbxSwimmers.ItemsSource = selectedTeam.players.FindAll(player => player.GetAge() <= 15);
+                        break;
+                    case "U14":
+                        lbxSwimmers.ItemsSource = selectedTeam.players.FindAll(player => player.GetAge() <= 13);
+                        break;
+                    default:
+                        lbxSwimmers.ItemsSource = null;
+                        break;
+                }
+            }
+        }
     }
-
-
-
 }

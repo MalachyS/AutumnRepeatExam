@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid>
-        <ListBox x:Name="lbxTeams" HorizontalAlignment="Left" Height="246" Margin="84,92,0,0" VerticalAlignment="Top" Width="227" d:ItemsSource="{d:SampleData ItemCount=5}"/>
+        <ListBox x:Name="lbxTeams" HorizontalAlignment="Left" Height="246" Margin="84,92,0,0" VerticalAlignment="Top" Width="227" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="lbxTeams_SelectionChanged"/>
         <ListBox x:Name="lbxSwimmers" HorizontalAlignment="Left" Height="246" Margin="392,92,0,0" VerticalAlignment="Top" Width="235" d:ItemsSource="{d:SampleData ItemCount=5}"/>
         <Label Content="Swim Club Team Manager" HorizontalAlignment="Center" Height="45" Margin="0,22,0,0" VerticalAlignment="Top" Width="328" FontSize="24"/>
         <TextBlock HorizontalAlignment="Left" Height="22" Margin="116,374,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="117"><Run Text="Total Swimmers:"/><Run Language="en-ie" Text=" 20"/></TextBlock>
