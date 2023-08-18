@@ -13,7 +13,7 @@ namespace AutumnRepeatExam
             InitializeComponent();
         }
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
+        private void Window_Loaded(object sender, RoutedEventArgs e) //this method means that there will be automatic generation of data
         {
             List<Member> generatedMembers = RandomMemberGenerator();
             List<Team> teams = MemberCount(generatedMembers);
@@ -27,6 +27,7 @@ namespace AutumnRepeatExam
             List<Member> generatedMembers = RandomMemberGenerator();
             List<Team> teams = MemberCount(generatedMembers);
 
+            lbxTeams.ItemsSource = teams;
             lbxSwimmers.ItemsSource = generatedMembers;
         }
 

@@ -42,7 +42,7 @@ internal class Member : IComparable<Member>
         return string.Compare(this.LastName, other.LastName, StringComparison.Ordinal);
     }
 
-    // Override ToString method
+    // Override ToString method to show data
       public override string ToString()
         {
             return $"{LastName}, {FirstName} - {DOB:MM/dd/yyyy} ({GetAge()} years old)";

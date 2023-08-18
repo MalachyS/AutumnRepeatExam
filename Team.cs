@@ -15,7 +15,7 @@ namespace AutumnRepeatExam
         {
             Teamname = name;
         }
-        public override string ToString()
+        public override string ToString()     // Override ToString method to show data
         {
             return $"{Teamname} - ({players.Count}Members)";
         }
