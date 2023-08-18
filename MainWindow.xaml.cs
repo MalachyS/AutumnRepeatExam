@@ -6,6 +6,7 @@ namespace AutumnRepeatExam
 {
     public partial class MainWindow : Window
     {
+        //github repo : https://github.com/MalachyS/AutumnRepeatExam.git
         private static readonly Random random = new Random();
 
         public MainWindow()
@@ -27,7 +28,7 @@ namespace AutumnRepeatExam
             List<Member> generatedMembers = RandomMemberGenerator();
             List<Team> teams = MemberCount(generatedMembers);
 
-            lbxTeams.ItemsSource = teams;
+            lbxTeams.ItemsSource = teams;                       // this line ensure the lbxTeams is update upon randomisation
             lbxSwimmers.ItemsSource = generatedMembers;
         }
 

@@ -7,10 +7,10 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid>
-        <ListBox x:Name="lbxTeams" HorizontalAlignment="Left" Height="246" Margin="84,92,0,0" VerticalAlignment="Top" Width="227" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="lbxTeams_SelectionChanged"/>
-        <ListBox x:Name="lbxSwimmers" HorizontalAlignment="Left" Height="246" Margin="392,92,0,0" VerticalAlignment="Top" Width="235" d:ItemsSource="{d:SampleData ItemCount=5}"/>
+        <ListBox x:Name="lbxTeams" HorizontalAlignment="Left" Height="277" Margin="84,92,0,0" VerticalAlignment="Top" Width="250" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="lbxTeams_SelectionChanged"/>
+        <ListBox x:Name="lbxSwimmers" HorizontalAlignment="Left" Height="277" Margin="392,92,0,0" VerticalAlignment="Top" Width="315" d:ItemsSource="{d:SampleData ItemCount=5}"/>
         <Label Content="Swim Club Team Manager" HorizontalAlignment="Center" Height="45" Margin="0,22,0,0" VerticalAlignment="Top" Width="328" FontSize="24"/>
-        <TextBlock HorizontalAlignment="Left" Height="22" Margin="116,374,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="117"><Run Text="Total Swimmers:"/><Run Language="en-ie" Text=" 20"/></TextBlock>
+        <TextBlock x:Name="txtblkTotal" HorizontalAlignment="Left" Height="22" Margin="116,374,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="117"><Run Text="Total Swimmers:"/><Run Language="en-ie" Text=" 20"/></TextBlock>
         <Button x:Name="btnRandom" Content="Randomise" HorizontalAlignment="Left" Height="22" Margin="591,374,0,0" VerticalAlignment="Top" Width="65" Click="btnRandom_Click"/>
         <Label Content="Teams" HorizontalAlignment="Left" Height="26" Margin="84,61,0,0" VerticalAlignment="Top" Width="82" RenderTransformOrigin="0.54,-0.528"/>
         <Label Content="Swimmers" HorizontalAlignment="Left" Margin="392,66,0,0" VerticalAlignment="Top" Width="68"/>
